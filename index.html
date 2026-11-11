@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="nb" data-u="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Odd Palerud Trykkeri · fire forslag til ny forside</title>
+<meta name="description" content="Fire forslag til ny forside for Odd Palerud AS, trykkeri i Hønefoss siden 1957. Laget av Lilit Labs.">
+<script>
+// Velg uttrykk før siden tegnes, så den ikke blinker
+(function () { var u = new URLSearchParams(location.search).get('u'); if (/^[1-4]$/.test(u)) document.documentElement.dataset.u = u; })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Fraunces:ital,opsz,wght@0,9..144,500..900;1,9..144,500..700&display=swap" rel="stylesheet">
+<style>
+/* ============ Felles ============ */
+:root {
+  --sans: "Atkinson Hyperlegible", Verdana, sans-serif;
+  --bredde: 1240px;
+  --c: #00A0DC; --m: #E0007A; --y: #FFE000;
+  --rod: #B7123D; --gronn: #0B6B3F;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-underline-offset: 4px; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; box-shadow: 0 0 0 6px #fff; }
+.wrap { max-width: var(--bredde); margin: 0 auto; padding: 0 28px; }
+h1, h2, h3 { font-family: var(--h-font); font-weight: var(--h-vekt); line-height: var(--h-lh, 1); margin: 0; letter-spacing: var(--h-ls); word-spacing: var(--h-ws, 0); font-variation-settings: "opsz" 144; }
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: 1.6rem; line-height: 1.12; letter-spacing: -0.01em; word-spacing: 0; font-weight: var(--h3-vekt, 700); }
+p { margin: 0 0 1em; max-width: 60ch; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.hopp { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 12px 16px; z-index: 80; }
+.hopp:focus { left: 8px; top: 8px; }
+
+/* Velger */
+.velger { position: sticky; top: 0; z-index: 70; background: #17140F; color: #F4EEE1; font-size: 16px; }
+.velger .wrap { display: flex; align-items: center; justify-content: space-between; gap: 8px 20px; flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; }
+.velger p { margin: 0; max-width: none; }
+.velger a { color: #fff; }
+.velger div { display: flex; gap: 6px; flex-wrap: wrap; }
+.velger button { font: 700 16px var(--sans); color: #F4EEE1; background: transparent; border: 2px solid #8A8274; padding: 8px 14px; min-height: 44px; cursor: pointer; }
+.velger button:hover { border-color: #fff; }
+.velger button[aria-pressed="true"] { background: #F4EEE1; color: #17140F; border-color: #F4EEE1; }
+.velger button:focus-visible { outline-color: #fff; box-shadow: none; }
+
+/* Topp */
+.topp { background: var(--flate); border-bottom: var(--kant) solid var(--kantfarge); }
+.topp .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; }
+.logo { display: block; text-decoration: none; background: #fff; }
+.logo img { height: 60px; width: auto; }
+.logo-tekst { display: none; padding: 4px; }
+.logo-tekst b { display: block; font: 900 2rem/1 Georgia, serif; color: var(--gronn); }
+.logo-tekst span { display: block; background: var(--rod); color: #fff; font-weight: 700; font-size: 15px; letter-spacing: 0.55em; text-align: center; padding: 1px 0 1px 0.55em; margin-top: 4px; }
+nav ul { list-style: none; display: flex; gap: 2px; margin: 0; padding: 0; flex-wrap: wrap; }
+nav a { display: block; padding: 10px 14px; text-decoration: none; font-weight: 700; }
+nav a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.knapp {
+  display: inline-block; background: var(--knapp-bg); color: var(--knapp-fg); text-decoration: none; cursor: pointer;
+  font: 700 19px var(--sans); padding: 15px 28px; border: var(--knapp-kant); border-radius: var(--radius); box-shadow: var(--knapp-skygge);
+  transition: transform .12s, box-shadow .12s, background .12s;
+}
+.knapp.to-er { background: var(--knapp2-bg); color: var(--knapp2-fg); }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; }
+.hero-topp { padding-top: 44px; }
+.aar { white-space: nowrap; }
+.aar i { display: none; font-style: normal; }
+.merker, .notat { display: none; }
+.hero-foto { display: none; }
+.hero-bunn { background: var(--band-bg); color: var(--band-fg); }
+.hero-bunn .wrap { display: grid; grid-template-columns: 1.2fr auto; gap: 32px; align-items: center; padding-top: 30px; padding-bottom: 34px; }
+.hero-bunn p { font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.35; margin: 0; max-width: 34ch; }
+.valg { display: flex; gap: 22px; flex-wrap: wrap; align-items: center; }
+.tlf { font-weight: 700; font-size: 1.25rem; padding: 10px 2px; }
+
+section { position: relative; }
+.luft { padding: var(--luft, 96px) 0; }
+.fotoplass { border: 2px dashed currentColor; aspect-ratio: 4 / 3; display: grid; place-items: center; text-align: center; padding: 24px; font-size: 17px; }
+.fotoplass b { display: block; font-family: var(--h-font); font-size: 1.5rem; line-height: 1.15; margin-bottom: 6px; }
+
+/* Det vi trykker */
+.trykker { background: var(--flate); }
+.plakat { font-family: var(--h-font); font-weight: var(--h-vekt); font-variation-settings: "opsz" 144; font-size: var(--plakat, clamp(2rem, 6.2vw, 5.4rem)); line-height: 1.04; letter-spacing: var(--h-ls); margin: 34px 0 56px; padding: 0; list-style: none; }
+.plakat li { display: inline; }
+.plakat li:nth-child(odd) { color: var(--acc); }
+.plakat li:nth-child(even) { color: var(--acc2); }
+.plakat li + li::before { content: " · "; color: var(--ink); }
+.to-spalter { display: grid; grid-template-columns: 1fr 1fr; border-top: var(--kant) solid var(--kantfarge); }
+.to-spalter > div { padding: 28px 28px 0 0; }
+.to-spalter > div + div { padding-left: 28px; border-left: var(--kant) solid var(--kantfarge); }
+.to-spalter h3 { font-size: 2rem; font-weight: var(--h-vekt); margin-bottom: 12px; }
+.to-spalter ul { list-style: none; margin: 0; padding: 0; font-size: 1.15rem; }
+.to-spalter li { padding: 10px 0; border-bottom: 1px solid var(--linje); }
+.to-spalter li:last-child { border-bottom: 0; }
+.inn { color: var(--dempet); font-size: 1.15rem; margin-top: 36px; }
+
+/* Winge */
+.winge { background: var(--winge-bg); color: var(--winge-fg); overflow: hidden; }
+.winge .kjempe, .winge .raster { display: none; }
+.winge .wrap { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+.winge h2 em { font-style: italic; color: var(--winge-em); }
+.winge .stor { font-size: 1.3rem; margin-top: 26px; }
+
+/* Arbeider */
+.arbeider-sek { background: var(--bg); }
+.arbeider-sek h2 { color: var(--acc2); }
+.arbeider { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; list-style: none; margin: 52px 0 0; padding: 0; }
+.arbeider li { background: var(--kort-bg); border: var(--kort-kant); box-shadow: var(--kort-skygge); border-radius: var(--kort-radius, 0); transition: transform .2s; }
+.arbeider .fotoplass { border: 0; border-bottom: var(--kort-kant); color: var(--dempet); aspect-ratio: 3 / 2; background: var(--foto-bg); }
+.arbeider .tekst { padding: 18px 20px 22px; }
+.arbeider h3 { margin-bottom: 4px; }
+.arbeider p { margin: 0; color: var(--dempet); font-size: 17px; }
+
+/* Folkene */
+.folkene { background: var(--folk-bg); color: var(--folk-fg); }
+.sitat { font-family: var(--h-font); font-style: var(--sitat-stil, italic); font-weight: var(--sitat-vekt, 600); font-size: clamp(1.9rem, 4.6vw, 3.8rem); line-height: 1.1; letter-spacing: var(--h-ls); max-width: 22ch; margin: 0 0 18px; }
+.sitat + p { font-size: 1.15rem; margin-bottom: 60px; opacity: 0.92; }
+.wrap > *, .folk li, .arbeider li { min-width: 0; }
+.folk h3 { hyphens: auto; overflow-wrap: break-word; }
+.folk { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; list-style: none; margin: 0; padding: 0; }
+.folk .fotoplass { aspect-ratio: 4 / 5; margin-bottom: 16px; }
+.folk h3 { font-size: 1.6rem; }
+.folk p { margin: 4px 0 0; opacity: 0.92; }
+
+/* Tilbud */
+.tilbud { background: var(--tilbud-bg); }
+.tilbud .wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+.stor-tlf { font-family: var(--h-font); font-weight: var(--h-vekt); font-variation-settings: "opsz" 144; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1; letter-spacing: var(--h-ls); text-decoration: none; display: inline-block; margin: 18px 0 20px; color: var(--acc2); }
+.stor-tlf:hover { text-decoration: underline; }
+form { background: var(--kort-bg); border: var(--kort-kant); box-shadow: var(--kort-skygge); border-radius: var(--kort-radius, 0); padding: 30px; display: grid; gap: 18px; }
+.to { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+label { display: block; font-weight: 700; margin-bottom: 6px; }
+label small { font-weight: 400; color: var(--dempet); font-size: 16px; }
+input, textarea, select { width: 100%; font: inherit; padding: 12px 14px; border: 2px solid #5E574D; border-radius: var(--felt-radius, 0); background: #fff; color: #17140F; }
+input[type=file] { padding: 10px; border-style: dashed; }
+textarea { min-height: 120px; resize: vertical; }
+form .knapp { justify-self: start; }
+.merknad { font-size: 16px; color: var(--dempet); margin: 0; }
+#takk { display: none; font-weight: 700; color: var(--gronn); margin: 0; }
+
+/* Bunn */
+footer { background: #17140F; color: #E9E2D4; padding: 40px 0 22px; font-size: 17px; }
+footer a { color: #fff; }
+.bunn { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 32px; }
+footer h2 { font: 700 17px var(--sans); color: #fff; letter-spacing: 0; word-spacing: 0; margin-bottom: 8px; }
+footer p { margin: 0; }
+footer ul { list-style: none; margin: 0; padding: 0; columns: 2; }
+footer li a { display: inline-block; padding: 4px 0; }
+.slutt { border-top: 1px solid #4A453E; margin-top: 28px; padding-top: 16px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 16px; }
+
+/* ============ 1 · Plakat ============ */
+[data-u="1"] {
+  --bg: #F4EEE1; --flate: #FFFDF7; --ink: #17140F; --dempet: #524C44; --linje: #D6CCB8;
+  --acc: #0B6B3F; --acc2: #B7123D;
+  --h-font: "Fraunces", Georgia, serif; --h-vekt: 900; --h-ls: -0.02em; --h-ws: 0.1em; --h-lh: 0.95;
+  --h1: clamp(2.6rem, 7.2vw, 6.6rem); --h2: clamp(2.6rem, 7vw, 5.6rem);
+  --kant: 3px; --kantfarge: #17140F; --radius: 0;
+  --knapp-bg: #B7123D; --knapp-fg: #fff; --knapp-kant: 3px solid #17140F; --knapp-skygge: 5px 5px 0 #17140F;
+  --knapp2-bg: #FFFDF7; --knapp2-fg: #17140F;
+  --band-bg: #B7123D; --band-fg: #fff;
+  --winge-bg: #17140F; --winge-fg: #F4EEE1; --winge-em: #FFE000;
+  --folk-bg: #07492B; --folk-fg: #fff;
+  --tilbud-bg: #FFFDF7;
+  --kort-bg: #FFFDF7; --kort-kant: 3px solid #17140F; --kort-skygge: 7px 7px 0 #17140F; --foto-bg: #EAE1CE;
+}
+[data-u="1"] body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: 0.2; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.22 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+[data-u="1"] .knapp:hover { transform: translate(3px, 3px); box-shadow: 2px 2px 0 #17140F; }
+[data-u="1"] .hero h1 { color: var(--acc); }
+[data-u="1"] .aar { display: block; position: relative; font-size: min(46vw, 600px); line-height: 0.8; letter-spacing: -0.055em; margin: 0.02em 0 0 -0.03em; color: transparent; user-select: none; word-spacing: 0; }
+[data-u="1"] .aar i { display: block; position: absolute; left: 0; top: 0; mix-blend-mode: multiply; animation: pass 1.5s cubic-bezier(.2,.8,.2,1) both; }
+[data-u="1"] .aar i:nth-child(1) { color: var(--c); --fx: -70px; --fy: 26px; --tx: -5px; --ty: 3px; }
+[data-u="1"] .aar i:nth-child(2) { color: var(--m); --fx: 80px; --fy: -34px; --tx: 4px; --ty: -2px; animation-delay: .12s; }
+[data-u="1"] .aar i:nth-child(3) { color: var(--y); --fx: 20px; --fy: 60px; --tx: 1px; --ty: 5px; animation-delay: .24s; }
+@keyframes pass { from { transform: translate(var(--fx), var(--fy)); opacity: 0; } 30% { opacity: 1; } to { transform: translate(var(--tx), var(--ty)); opacity: 1; } }
+[data-u="1"] .merker { display: flex; position: absolute; right: 28px; top: 44px; gap: 18px; align-items: center; z-index: 2; }
+[data-u="1"] .merker svg { width: 46px; height: 46px; }
+.stripe { display: flex; border: 1px solid #17140F; }
+.stripe b { width: 22px; height: 22px; display: block; }
+[data-u="1"] .hero-bunn { border-top: 3px solid #17140F; border-bottom: 3px solid #17140F; position: relative; z-index: 3; }
+[data-u="1"] .hero-bunn p { font-family: var(--h-font); font-weight: 600; }
+[data-u="1"] .trykker, [data-u="1"] .arbeider-sek, [data-u="1"] .folkene { border-bottom: 3px solid #17140F; }
+[data-u="1"] .winge .kjempe { display: block; position: absolute; right: -4vw; bottom: -0.16em; font-family: var(--h-font); font-weight: 900; font-variation-settings: "opsz" 144; font-size: 34vw; line-height: 0.8; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 2px #4A443A; user-select: none; pointer-events: none; }
+[data-u="1"] .winge .fotoplass { background: #17140Fcc; transform: rotate(2deg); border-width: 3px; }
+[data-u="1"] .arbeider li:nth-child(3n+1) { transform: rotate(-1.2deg); }
+[data-u="1"] .arbeider li:nth-child(3n+2) { transform: rotate(0.9deg) translateY(12px); }
+[data-u="1"] .arbeider li:nth-child(3n) { transform: rotate(-0.5deg); }
+[data-u="1"] .arbeider li:hover { transform: rotate(0) scale(1.02); }
+[data-u="1"] .arbeider li:nth-child(2) .fotoplass, [data-u="1"] .arbeider li:nth-child(6) .fotoplass { background: #D9E6DC; }
+[data-u="1"] .arbeider li:nth-child(3) .fotoplass, [data-u="1"] .arbeider li:nth-child(4) .fotoplass { background: #F1D9DD; }
+
+/* ============ 2 · Mesterbrev ============ */
+[data-u="2"] {
+  --bg: #F8F4EA; --flate: #FFFDF8; --ink: #1D2A22; --dempet: #4E574F; --linje: #CFC8B5;
+  --acc: #0B5A36; --acc2: #9A1434;
+  --h-font: "Cormorant Garamond", Garamond, serif; --h-vekt: 700; --h-ls: -0.01em; --h-lh: 1.02;
+  --h1: clamp(3rem, 8vw, 6.8rem); --h2: clamp(2.6rem, 5.6vw, 4.4rem);
+  --kant: 1px; --kantfarge: #1D2A22; --radius: 0;
+  --knapp-bg: #0B5A36; --knapp-fg: #fff; --knapp-kant: 1px solid #0B5A36; --knapp-skygge: none;
+  --knapp2-bg: transparent; --knapp2-fg: #1D2A22;
+  --band-bg: transparent; --band-fg: #1D2A22;
+  --winge-bg: #0B3F27; --winge-fg: #F8F4EA; --winge-em: #E9D9A6;
+  --folk-bg: #FFFDF8; --folk-fg: #1D2A22;
+  --tilbud-bg: #F8F4EA;
+  --kort-bg: #FFFDF8; --kort-kant: 1px solid #1D2A22; --kort-skygge: none; --foto-bg: #EFE9DA;
+  --plakat: clamp(1.7rem, 3.6vw, 2.9rem);
+}
+[data-u="2"] .knapp { letter-spacing: 0.04em; }
+[data-u="2"] .knapp:hover { background: #07492B; color: #fff; }
+[data-u="2"] .knapp.to-er { border-color: #1D2A22; }
+[data-u="2"] .hero-topp { text-align: center; padding-top: 40px; }
+[data-u="2"] .hero-topp .wrap > div:first-child { border: 1px solid var(--ink); outline: 1px solid var(--ink); outline-offset: 6px; margin: 8px; padding: 64px 24px 56px; background: var(--flate); }
+[data-u="2"] .hero h1 { color: var(--acc); max-width: 12ch; margin: 0 auto; }
+[data-u="2"] .aar { font-style: italic; font-weight: 600; color: var(--acc2); }
+[data-u="2"] .hero h1::after, [data-u="2"] .luft h2::after { content: ""; display: block; width: 120px; height: 9px; margin: 26px auto 0; background: linear-gradient(var(--ink), var(--ink)) center / 100% 1px no-repeat, radial-gradient(circle, var(--acc2) 4px, var(--bgsirkel, #FFFDF8) 4.5px) center / 22px 9px no-repeat; }
+[data-u="2"] .hero-bunn .wrap { grid-template-columns: 1fr; justify-items: center; text-align: center; padding-top: 34px; padding-bottom: 20px; }
+[data-u="2"] .hero-bunn p { font-family: var(--h-font); font-weight: 600; font-size: clamp(1.5rem, 2.6vw, 2rem); max-width: 36ch; }
+[data-u="2"] .valg { justify-content: center; }
+[data-u="2"] .hero-foto { display: block; padding: 28px 0 80px; }
+[data-u="2"] .hero-foto .fotoplass { aspect-ratio: 21 / 8; border-style: solid; border-width: 1px; background: var(--foto-bg); color: var(--dempet); }
+[data-u="2"] .luft h2 { text-align: center; color: var(--acc); }
+[data-u="2"] .luft h2::after { margin-top: 18px; }
+[data-u="2"] .trykker h2::after, [data-u="2"] .folkene h2::after { --bgsirkel: #FFFDF8; }
+[data-u="2"] .arbeider-sek h2::after, [data-u="2"] .tilbud h2::after { --bgsirkel: #F8F4EA; }
+[data-u="2"] .plakat { text-align: center; font-weight: 600; max-width: 30ch; margin-left: auto; margin-right: auto; }
+[data-u="2"] .plakat li:nth-child(n) { color: var(--ink); }
+[data-u="2"] .plakat li + li::before { color: var(--acc2); }
+[data-u="2"] .inn { text-align: center; margin-left: auto; margin-right: auto; }
+[data-u="2"] .winge h2 { text-align: left; color: #fff; }
+[data-u="2"] .winge h2::after { display: none; }
+[data-u="2"] .winge .fotoplass { border-style: solid; border-width: 1px; }
+[data-u="2"] .sitat { text-align: center; margin-left: auto; margin-right: auto; color: var(--acc); max-width: 24ch; }
+[data-u="2"] .sitat + p { text-align: center; margin-left: auto; margin-right: auto; }
+[data-u="2"] .folk { text-align: center; }
+[data-u="2"] .folk .fotoplass { border-style: solid; border-width: 1px; background: var(--foto-bg); color: var(--dempet); }
+[data-u="2"] .tilbud h2 { text-align: left; }
+[data-u="2"] .tilbud h2::after { margin-left: 0; }
+[data-u="2"] .trykker, [data-u="2"] .folkene { border-top: 1px solid var(--linje); border-bottom: 1px solid var(--linje); }
+
+/* ============ 3 · Sveitsisk ============ */
+[data-u="3"] {
+  --bg: #FFFFFF; --flate: #FFFFFF; --ink: #111111; --dempet: #4D4D4D; --linje: #D4D4D4;
+  --acc: #111111; --acc2: #B7123D;
+  --h-font: "Archivo", Arial, sans-serif; --h-vekt: 800; --h-ls: -0.045em; --h-lh: 0.92; --h3-vekt: 800;
+  --h1: clamp(3rem, 8.6vw, 7.6rem); --h2: clamp(2.4rem, 5.6vw, 4.6rem);
+  --kant: 1px; --kantfarge: #111; --radius: 0;
+  --knapp-bg: #111; --knapp-fg: #fff; --knapp-kant: 2px solid #111; --knapp-skygge: none;
+  --knapp2-bg: #B7123D; --knapp2-fg: #fff;
+  --band-bg: #fff; --band-fg: #111;
+  --winge-bg: #111; --winge-fg: #fff; --winge-em: #fff;
+  --folk-bg: #fff; --folk-fg: #111;
+  --tilbud-bg: #F1F1EE;
+  --kort-bg: #fff; --kort-kant: 1px solid #111; --kort-skygge: none; --foto-bg: #EDEDEA;
+  --sitat-stil: normal; --sitat-vekt: 800; --luft: 110px;
+  --plakat: clamp(1.8rem, 4.4vw, 3.6rem);
+}
+[data-u="3"] .knapp:hover { background: #B7123D; border-color: #B7123D; color: #fff; }
+[data-u="3"] .knapp.to-er { border-color: #B7123D; }
+[data-u="3"] .knapp.to-er:hover { background: #111; border-color: #111; }
+[data-u="3"] .hero-topp { padding: 56px 0 0; }
+[data-u="3"] .hero-topp .wrap { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: end; }
+[data-u="3"] .hero h1 { padding-bottom: 0.08em; }
+[data-u="3"] .aar { color: var(--acc2); }
+[data-u="3"] .hero-foto { display: block; }
+[data-u="3"] .hero-foto .fotoplass { aspect-ratio: 4 / 5; border: 0; background: var(--foto-bg); color: var(--dempet); }
+[data-u="3"] .hero-bunn { border-top: 1px solid #111; margin-top: 40px; }
+[data-u="3"] .luft { border-top: 1px solid #111; }
+[data-u="3"] .luft > .wrap { display: grid; grid-template-columns: 1fr 2.2fr; gap: 40px; }
+[data-u="3"] .luft > .wrap > h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); letter-spacing: -0.03em; line-height: 1.05; }
+[data-u="3"] .luft > .wrap > *:not(h2) { grid-column: 2; }
+[data-u="3"] .plakat { margin-top: 0; font-weight: 500; letter-spacing: -0.035em; }
+[data-u="3"] .plakat li + li::before { content: " / "; color: var(--acc2); }
+[data-u="3"] .plakat li:nth-child(n) { color: var(--ink); }
+[data-u="3"] .arbeider { margin-top: 0; gap: 24px; grid-template-columns: repeat(2, 1fr); }
+[data-u="3"] .arbeider-sek h2 { color: var(--ink); }
+[data-u="3"] .winge > .wrap { grid-template-columns: 1.1fr 0.9fr; }
+[data-u="3"] .winge > .wrap > *:not(h2) { grid-column: auto; }
+[data-u="3"] .winge > .wrap > div > h2 { font-size: var(--h2); }
+[data-u="3"] .winge h2 em { font-style: normal; text-decoration: underline; text-decoration-color: #B7123D; text-decoration-thickness: 0.09em; text-underline-offset: 0.1em; }
+[data-u="3"] .winge .fotoplass { border: 1px solid #fff; }
+[data-u="3"] .sitat { max-width: 18ch; }
+[data-u="3"] .folk .fotoplass { border: 0; background: var(--foto-bg); color: var(--dempet); }
+[data-u="3"] .tilbud > .wrap { grid-template-columns: 0.9fr 1.1fr; }
+[data-u="3"] .tilbud > .wrap > *:not(h2) { grid-column: auto; }
+[data-u="3"] .tilbud h2 { font-size: var(--h2); }
+
+/* ============ 4 · Verksted ============ */
+[data-u="4"] {
+  --bg: #EFE6D5; --flate: #F9F3E7; --ink: #2A231B; --dempet: #564C40; --linje: #D5C8B0;
+  --acc: #1C6540; --acc2: #A8123A;
+  --h-font: "Fraunces", Georgia, serif; --h-vekt: 600; --h-ls: -0.02em; --h-lh: 1.02;
+  --h1: clamp(2.8rem, 6.6vw, 5.6rem); --h2: clamp(2.3rem, 5vw, 4rem);
+  --kant: 0px; --kantfarge: transparent; --radius: 999px;
+  --knapp-bg: #1C6540; --knapp-fg: #fff; --knapp-kant: 2px solid #1C6540; --knapp-skygge: 0 3px 0 #0E3D26;
+  --knapp2-bg: #F9F3E7; --knapp2-fg: #2A231B;
+  --band-bg: transparent; --band-fg: #2A231B;
+  --winge-bg: #2A231B; --winge-fg: #F4EBDA; --winge-em: #F0C36A;
+  --folk-bg: #DCE6D6; --folk-fg: #20301F;
+  --tilbud-bg: #F9F3E7;
+  --kort-bg: #FFFDF8; --kort-kant: 0 solid transparent; --kort-skygge: 0 2px 4px #2A231B22, 0 14px 30px -12px #2A231B55; --kort-radius: 4px; --foto-bg: #E7DDCB;
+  --felt-radius: 8px; --plakat: clamp(1.8rem, 4.2vw, 3.4rem);
+}
+[data-u="4"] .knapp:hover { transform: translateY(2px); box-shadow: 0 1px 0 #0E3D26; }
+[data-u="4"] .knapp.to-er { border-color: #2A231B; box-shadow: 0 3px 0 #2A231B; }
+[data-u="4"] .topp { background: transparent; }
+[data-u="4"] .logo { padding: 4px 8px; border-radius: 4px; }
+[data-u="4"] .hero-topp { padding: 48px 0 8px; }
+[data-u="4"] .hero-topp .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+[data-u="4"] .hero h1 { color: var(--ink); }
+[data-u="4"] .aar { color: var(--acc2); font-style: italic; }
+[data-u="4"] .notat { display: block; font: 600 1.9rem/1.1 "Caveat", cursive; color: var(--acc); transform: rotate(-3deg); margin: 22px 0 0 8px; max-width: none; }
+[data-u="4"] .hero-foto { display: block; }
+[data-u="4"] .fotoplass { font: 600 1.6rem/1.15 "Caveat", cursive; }
+[data-u="4"] .fotoplass b { font: inherit; }
+[data-u="4"] .hero-foto .fotoplass, [data-u="4"] .winge .fotoplass {
+  position: relative; border: 0; background: var(--foto-bg); color: var(--dempet); aspect-ratio: 1 / 1;
+  outline: 14px solid #FFFDF8; outline-offset: 0; margin: 14px 14px 62px; box-shadow: 0 62px 0 0 #FFFDF8, 0 30px 50px -10px #2A231B66; transform: rotate(2.5deg);
+}
+[data-u="4"] .hero-foto .fotoplass::before, [data-u="4"] .winge .fotoplass::before { content: ""; position: absolute; top: -34px; left: 50%; width: 120px; height: 34px; margin-left: -60px; background: #E9D9A6cc; transform: rotate(-4deg); }
+[data-u="4"] .winge .fotoplass { transform: rotate(-2deg); }
+[data-u="4"] .hero-bunn .wrap { padding-top: 20px; padding-bottom: 72px; }
+[data-u="4"] .trykker { border-radius: 28px 28px 0 0; }
+[data-u="4"] .plakat { font-weight: 600; }
+[data-u="4"] .to-spalter { border-top: 2px solid var(--linje); }
+[data-u="4"] .to-spalter > div + div { border-left: 2px solid var(--linje); }
+[data-u="4"] .arbeider li { padding: 12px 12px 0; }
+[data-u="4"] .arbeider li:nth-child(odd) { transform: rotate(-1deg); }
+[data-u="4"] .arbeider li:nth-child(even) { transform: rotate(0.8deg); }
+[data-u="4"] .arbeider li:hover { transform: rotate(0) translateY(-4px); }
+[data-u="4"] .arbeider .tekst { padding: 14px 6px 18px; }
+[data-u="4"] .folk .fotoplass { border: 0; background: #FFFDF8; color: var(--dempet); border-radius: 4px; box-shadow: var(--kort-skygge); }
+[data-u="4"] .folk li:nth-child(odd) .fotoplass { transform: rotate(-1.2deg); }
+[data-u="4"] .folk li:nth-child(even) .fotoplass { transform: rotate(1deg); }
+[data-u="4"] .sitat { color: var(--acc); }
+[data-u="4"] form { padding: 30px; border-radius: 12px; }
+
+/* ============ Smale skjermer ============ */
+@media (max-width: 900px) {
+  .hero-bunn .wrap, .winge .wrap, .tilbud .wrap,
+  [data-u="3"] .hero-topp .wrap, [data-u="4"] .hero-topp .wrap,
+  [data-u="3"] .luft > .wrap, [data-u="3"] .winge > .wrap, [data-u="3"] .tilbud > .wrap { grid-template-columns: 1fr; gap: 28px; }
+  [data-u="3"] .luft > .wrap > *:not(h2) { grid-column: 1; }
+  .luft { padding: 64px 0; }
+  .arbeider { grid-template-columns: 1fr 1fr; }
+  .folk { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .folk h3 { font-size: 1.35rem; }
+  .bunn { grid-template-columns: 1fr; }
+  nav { width: 100%; } nav ul { margin-left: -14px; }
+  [data-u="1"] .merker { top: 18px; right: 16px; } [data-u="1"] .merker svg { width: 34px; height: 34px; } .stripe b { width: 14px; height: 14px; }
+  [data-u="1"] .hero h1 { padding-top: 34px; }
+  [data-u="3"] .hero-foto .fotoplass { aspect-ratio: 16 / 9; }
+  [data-u="4"] .hero-foto { max-width: 360px; }
+  [data-u="2"] .hero-foto .fotoplass { aspect-ratio: 16 / 9; }
+}
+@media (max-width: 600px) {
+  .wrap { padding: 0 18px; }
+  .arbeider, [data-u="3"] .arbeider { grid-template-columns: 1fr; gap: 30px; }
+  .to, .to-spalter { grid-template-columns: 1fr; }
+  .to-spalter > div + div, [data-u="4"] .to-spalter > div + div { padding-left: 0; border-left: 0; border-top: var(--kant) solid var(--kantfarge); margin-top: 20px; }
+  .logo img { height: 46px; }
+  .topp .knapp { display: none; }
+  form, [data-u="4"] form { padding: 20px; }
+  .knapp { padding: 14px 22px; }
+  .velger p { font-size: 15px; }
+  [data-u="2"] .hero-topp .wrap > div:first-child { padding: 40px 14px 36px; margin: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-u="1"] .aar i { animation: none; transform: translate(var(--tx), var(--ty)); }
+  .knapp, .arbeider li { transition: none; }
+}
+</style>
+</head>
+<body>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+
+<div class="velger">
+  <div class="wrap">
+    <p>Fire forslag til ny forside. Laget av <a href="https://www.lilitlabs.com">Lilit Labs</a>, ikke publisert.</p>
+    <div role="group" aria-label="Velg uttrykk">
+      <button type="button" data-velg="1">1 Plakat</button>
+      <button type="button" data-velg="2">2 Mesterbrev</button>
+      <button type="button" data-velg="3">3 Sveitsisk</button>
+      <button type="button" data-velg="4">4 Verksted</button>
+    </div>
+  </div>
+</div>
+
+<header class="topp">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Odd Palerud AS, trykkeri. Til forsiden">
+      <!-- Legg en bedre logo som logo.png i denne mappa, så brukes den. Ellers hentes logoen fra palerud.no. -->
+      <img src="logo.png" alt="Odd Palerud as, trykkeri"
+           onerror="if(!this.dataset.n){this.dataset.n=1;this.src='https://www.palerud.no/wp-content/uploads/2022/12/6943182.png'}else{this.style.display='none';this.nextElementSibling.style.display='block'}">
+      <span class="logo-tekst"><b>Odd Palerud as</b><span>TRYKKERI</span></span>
+    </a>
+    <nav aria-label="Hovedmeny">
+      <ul>
+        <li><a href="#trykker">Det vi trykker</a></li>
+        <li><a href="#arbeider">Arbeider</a></li>
+        <li><a href="#folkene">Folkene</a></li>
+        <li><a href="#tilbud">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="knapp" href="#tilbud">Be om tilbud</a>
+  </div>
+</header>
+
+<main id="innhold">
+
+<section class="hero">
+  <div class="merker" aria-hidden="true">
+    <span class="stripe"><b style="background:var(--c)"></b><b style="background:var(--m)"></b><b style="background:var(--y)"></b><b style="background:#17140F"></b></span>
+    <svg viewBox="0 0 46 46" fill="none" stroke="#17140F" stroke-width="1.5"><circle cx="23" cy="23" r="12"/><circle cx="23" cy="23" r="5"/><path d="M23 0v46M0 23h46"/></svg>
+  </div>
+  <div class="hero-topp">
+    <div class="wrap">
+      <div>
+        <h1>Trykt i Hønefoss siden
+          <span class="aar" aria-hidden="true">1957<i>1957</i><i>1957</i><i>1957</i></span><span class="sr">1957</span>
+        </h1>
+        <p class="notat">Andre generasjon ved maskinene</p>
+      </div>
+      <div class="hero-foto"><div class="fotoplass"><div><b>Foto fra trykkeriet</b>Et ark på vei ut av maskinen.</div></div></div>
+    </div>
+  </div>
+  <div class="hero-bunn">
+    <div class="wrap">
+      <p>Visittkort, brosjyrer, magasiner og årsrapporter. Fire fagfolk som trykker, skjærer, falser og binder inn i Ullerålsgata.</p>
+      <div class="valg">
+        <a class="knapp to-er" href="#tilbud">Be om tilbud</a>
+        <a class="tlf" href="tel:+4732122568">Ring 32 12 25 68</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trykker" class="trykker luft">
+  <div class="wrap">
+    <h2>Det vi trykker</h2>
+    <ul class="plakat">
+      <li>Brosjyrer</li><li>Kataloger</li><li>Magasiner</li><li>Årsrapporter</li><li>Hefter</li><li>Plakater</li><li>Flyere</li><li>Blokker</li><li>Omslagsmapper</li><li>Fakturaer</li><li>Skjemaer</li><li>Konvolutter</li>
+    </ul>
+    <div class="to-spalter">
+      <div>
+        <h3>Spesialtrykk</h3>
+        <ul>
+          <li>Utstansing</li>
+          <li>Rilling</li>
+          <li>Nummerering</li>
+          <li>Trykk med gjennomslag</li>
+          <li>Spesialkonvolutter og bompengeposer</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ferdiggjøring</h3>
+        <ul>
+          <li>Skjæring</li>
+          <li>Falsing</li>
+          <li>Innbinding</li>
+          <li>Pakket og klart til levering</li>
+          <li>Design og utforming, om du trenger det</li>
+        </ul>
+      </div>
+    </div>
+    <p class="inn">Finner du ikke det du leter etter, så ta kontakt. Vi hjelper deg med rådene du trenger for å få resultatet du ønsker.</p>
+  </div>
+</section>
+
+<section class="winge luft">
+  <div class="kjempe" aria-hidden="true">Winge</div>
+  <div class="wrap">
+    <div>
+      <h2>Vi bruker <em>fortsatt</em> <span style="white-space:nowrap">Winge-en.</span></h2>
+      <p class="stor">Klassikeren står der ennå. Den er verktøyet vårt når noe skal stanses ut, rilles, nummereres eller trykkes med gjennomslag.</p>
+      <p>En trykksak er langt fra ferdig når den kommer ut av maskinen. Når fargene sitter som de skal, tar de over som skjærer, falser og binder inn. Det er der nøyaktigheten avgjør.</p>
+    </div>
+    <div class="fotoplass"><div><b>Foto av Winge-maskinen</b>Nærbilde i arbeid, gjerne med en av trykkerne.</div></div>
+  </div>
+</section>
+
+<section id="arbeider" class="arbeider-sek luft">
+  <div class="wrap">
+    <h2>Noe av det vi har trykt</h2>
+    <ul class="arbeider">
+      <li><div class="fotoplass">Foto av trykksaken</div><div class="tekst"><h3>Ringerike utvikling AS</h3><p>Ryggstiftet magasin, A4, 32 sider</p></div></li>
+      <li><div class="fotoplass">Foto av trykksaken</div><div class="tekst"><h3>Stiftelsen Glatved Brygge</h3><p>Spiralisert bok, A5, 64 sider</p></div></li>
+      <li><div class="fotoplass">Foto av trykksaken</div><div class="tekst"><h3>TBA Arrangementer AS</h3><p>Plakater og programblad, A5, 24 sider</p></div></li>
+      <li><div class="fotoplass">Foto av trykksaken</div><div class="tekst"><h3>Kvint Interiør AS</h3><p>Brevark og visittkort</p></div></li>
+      <li><div class="fotoplass">Foto av trykksaken</div><div class="tekst"><h3>Entel AS</h3><p>Ryggstiftet brosjyre, A5, 8 sider</p></div></li>
+      <li><div class="fotoplass">Foto av trykksaken</div><div class="tekst"><h3>Distriktenes energiforening</h3><p>Årsrapporter</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="folkene" class="folkene luft">
+  <div class="wrap">
+    <h2>Folkene</h2>
+    <div>
+      <p class="sitat">«God kundeservice, kvalitet på alt vi produserer og hurtig levering.»</p>
+      <p>Svaret når folk spør hvordan fire fagfolk har holdt det gående siden Odd Palerud startet i 1957. Nå driver andre generasjon.</p>
+      <ul class="folk">
+        <li><div class="fotoplass">Portrett</div><h3>Knut Palerud</h3><p>Daglig leder og trykker med mesterbrev</p><p><a href="mailto:knut@palerud.no">knut@palerud.no</a></p></li>
+        <li><div class="fotoplass">Portrett</div><h3>Martin Palerud</h3><p>Typograf og mediegrafiker</p><p><a href="mailto:martin@palerud.no">martin@palerud.no</a></p></li>
+        <li><div class="fotoplass">Portrett</div><h3>Torbjørn Hammerengen</h3><p>Trykker med svennebrev</p></li>
+        <li><div class="fotoplass">Portrett</div><h3>Merethe Olsen</h3><p>Ferdiggjører</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="tilbud" class="tilbud luft">
+  <div class="wrap">
+    <div>
+      <h2>Be om tilbud</h2>
+      <a class="stor-tlf" href="tel:+4732122568">32 12 25 68</a>
+      <p style="font-size:1.2rem">Fortell hva du trenger, og legg gjerne ved fila. Eller ring, så tar vi det på telefon.</p>
+      <p><a href="mailto:post@palerud.no">post@palerud.no</a><br>
+      Ullerålsgata 12, 3513 Hønefoss<br>
+      <a href="https://maps.google.com/maps?q=Ullerålsgata+12,+3513+Hønefoss">Vis vei i Google Maps</a></p>
+    </div>
+    <form id="skjema" novalidate>
+      <div class="to">
+        <div><label for="navn">Navn</label><input id="navn" name="navn" autocomplete="name" required></div>
+        <div><label for="firma">Firma <small>(valgfritt)</small></label><input id="firma" name="firma" autocomplete="organization"></div>
+      </div>
+      <div class="to">
+        <div><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
+        <div><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="to">
+        <div><label for="hva">Hva skal trykkes?</label>
+          <select id="hva" name="hva">
+            <option>Visittkort eller brevark</option><option>Brosjyre eller katalog</option><option>Magasin eller hefte</option>
+            <option>Plakat eller flyer</option><option>Blokker eller skjemaer</option><option>Spesialtrykk</option><option>Noe annet</option>
+          </select></div>
+        <div><label for="opplag">Opplag <small>(omtrent)</small></label><input id="opplag" name="opplag" inputmode="numeric"></div>
+      </div>
+      <div><label for="melding">Beskriv jobben</label><textarea id="melding" name="melding"></textarea></div>
+      <div><label for="fil">Legg ved fil <small>(PDF, valgfritt)</small></label><input id="fil" name="fil" type="file" accept=".pdf,.ai,.indd,.zip"></div>
+      <button class="knapp" type="submit">Send forespørsel</button>
+      <p id="takk" role="status" tabindex="-1">Takk. I den ferdige siden går forespørselen rett til post@palerud.no.</p>
+      <p class="merknad">Dette er et forslag. Skjemaet sender ingenting.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="bunn">
+      <div>
+        <h2>Odd Palerud AS</h2>
+        <p>Ullerålsgata 12, 3513 Hønefoss<br>Org.nr 971 647 582</p>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <p><a href="tel:+4732122568">32 12 25 68</a><br><a href="mailto:post@palerud.no">post@palerud.no</a><br>Åpningstider: fylles inn</p>
+      </div>
+      <div>
+        <h2>Sider</h2>
+        <ul>
+          <li><a href="#trykker">Det vi trykker</a></li>
+          <li><a href="#arbeider">Arbeider</a></li>
+          <li><a href="#folkene">Folkene</a></li>
+          <li><a href="#tilbud">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="slutt">
+      <span>© 2026 Odd Palerud AS</span>
+      <span>Forslag av: <a href="https://www.lilitlabs.com">Lilit Labs</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var rot = document.documentElement;
+  var knapper = document.querySelectorAll('[data-velg]');
+  function vis(u) {
+    rot.dataset.u = u;
+    knapper.forEach(function (k) { k.setAttribute('aria-pressed', k.dataset.velg === u ? 'true' : 'false'); });
+  }
+  knapper.forEach(function (k) {
+    k.addEventListener('click', function () {
+      vis(k.dataset.velg);
+      try { history.replaceState(null, '', '?u=' + k.dataset.velg); } catch (e) {}
+      window.scrollTo(0, 0);
+    });
+  });
+  vis(rot.dataset.u || '1');
+
+  document.getElementById('skjema').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var t = document.getElementById('takk');
+    t.style.display = 'block';
+    t.focus();
+  });
+})();
+</script>
+</body>
+</html>
